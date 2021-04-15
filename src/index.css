@@ -1,13 +1,163 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,700');
+
+*,
+*::before,
+*::after {
+  margin: 0 a;
+  padding: 0;
+  box-sizing: inherit;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0 auto;
+  padding: 0;
+
+  font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 1.6rem;
+  font-weight: 300;
+  letter-spacing: 0em;
+  line-height: 1.1;
+
+  background-color: #eceff1;
+  color: #17252a;
+
+  /* border: 1px solid red; */
+}
+
+/* HEADER COMPONENT */
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 6rem;
+  height: 8.2rem;
+  /* border: 1px solid red; */
+}
+
+.header-logo {
+  padding: 1rem;
+  width: 6.2rem;
+  text-align: center;
+  /* border: 1px solid red; */
+}
+
+.header-navigation-container {
+  display: flex;
+}
+
+.header-navigation-item {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  padding: 1rem;
+  width: 6.2rem;
+  text-align: center;
+  /* border: 1px solid red;border: 1px solid red; */
+}
+
+.header-navigation-underlined {
+  border-bottom: #17252a solid 2px;
+}
+
+/* MAIN SECTION */
+.main-section-container {
+  margin: 0 auto;
+  height: calc(100vh - 8.2rem - 5rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 90rem;
+  padding-left: 6rem;
+  /* border: 1px solid red; */
+}
+
+.main-section-container h1 {
+  font-size: 2.8rem;
+  font-weight: 300;
+  padding: 0;
+  margin: 0;
+}
+
+.blank {
+  color: #eceff1;
+  font-size: 6rem;
+}
+
+/* FOOTER */
+.footer {
+  height: 5rem;
+  display: flex;
+  padding-left: 6rem;
+  padding-right: 6rem;
+  display: flex;
+  justify-content: center;
+}
+
+/* RUBBERBAND ANIMATION */
+.text {
+  display: flex;
+}
+
+a:link {
+  text-decoration: none;
+  color: black;
+}
+a:visited {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+a:active {
+  text-decoration: none;
+}
+
+.rubberBand {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-iteration-count: 1;
+  font-size: 8rem;
+  font-weight: bold;
+  padding: 0;
+  margin: 0;
+}
+
+.rubberBand.animated {
+  -webkit-animation-name: rubberBand;
+  animation-name: rubberBand;
+}
+
+@keyframes rubberBand {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+
+  30% {
+    transform: scale3d(1.25, 0.75, 1);
+  }
+
+  40% {
+    transform: scale3d(0.75, 1.25, 1);
+  }
+
+  50% {
+    transform: scale3d(1.15, 0.85, 1);
+  }
+
+  65% {
+    transform: scale3d(0.95, 1.05, 1);
+  }
+
+  75% {
+    transform: scale3d(1.05, 0.95, 1);
+  }
+
+  to {
+    transform: scale3d(1, 1, 1);
+  }
 }
