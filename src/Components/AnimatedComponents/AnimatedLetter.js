@@ -6,14 +6,14 @@ const AnimatedLetter = ({ children, index }) => {
   React.useEffect(() => {
     setTimeout(() => {
       animationTiming()
-    }, 500 + (index * 100));
+    }, 500 + (index * 100))
   }, [])
 
   const animationTiming = () => {
     setHovered(true)
     setTimeout(() => {
       setHovered(false)
-    }, 1000)
+    }, 1000 + (index * 100))
   }
 
   setInterval(() => {

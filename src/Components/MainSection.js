@@ -8,7 +8,7 @@ export default function MainSection() {
     <div className="main-section-container">
         <h1>Hi, my name is</h1>
         <AnimatedWord word={"Rick Brown"} />
-        <h1>{"& I love to create unique web experiences"}</h1>
+        <h1>{"& I love to create unique user experiences"}</h1>
         <h1>{"for both the web and iOS devices."}</h1>
     </div>
   )

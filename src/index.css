@@ -42,8 +42,9 @@ body {
 
 .header-logo {
   padding: 1rem;
-  width: 6.2rem;
+  width: 12.2rem;
   text-align: center;
+  margin-top: -1.4rem;
   /* border: 1px solid red; */
 }
 
@@ -57,7 +58,7 @@ body {
   padding: 1rem;
   width: 6.2rem;
   text-align: center;
-  /* border: 1px solid red;border: 1px solid red; */
+  /* border: 1px solid red; */
 }
 
 .header-navigation-underlined {
@@ -96,6 +97,14 @@ body {
   padding-right: 6rem;
   display: flex;
   justify-content: center;
+}
+
+a {
+  color: black;
+}
+
+.footer-copyright {
+  padding: 0 0.4rem;
 }
 
 /* RUBBERBAND ANIMATION */

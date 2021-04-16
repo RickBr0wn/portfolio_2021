@@ -1,4 +1,5 @@
 import React from 'react'
+import Logo from '../Images/rb_logo.png'
 
 function Header() {
   const [isSelected, setIsSelected] = React.useState('home')
@@ -6,7 +7,7 @@ function Header() {
   return (
     <div className="header-container">
       <div className="header-logo">
-      rb
+      <img src={Logo} className="header-logo" alt="rb" />
       </div>
       <div className="header-navigation-container">
         <div 
