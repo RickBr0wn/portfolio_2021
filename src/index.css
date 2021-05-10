@@ -104,11 +104,29 @@ body {
 }
 
 .blog-moving-part {
-  background-color: crimson;
+  /* background-color: crimson; */
   height: 20rem;
-  width: 20rem;
+  width: 100vw;
   position: absolute;
-  top: -20rem;
+  top: -50rem;
+  padding: 20rem;
+}
+
+/* PORTFOLIO */
+.portfolio-background-image {
+  /* background-color: blueviolet; */
+  height: 100rem;
+  width: 100vw;
+}
+
+.portfolio-moving-part {
+  /* background-color: crimson; */
+  height: 20rem;
+  width: 100vw;
+  position: absolute;
+  top: 15vh;
+  left: 300vw;
+  padding: 20rem;
 }
 
 /* FOOTER */

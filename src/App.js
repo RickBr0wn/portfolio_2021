@@ -3,6 +3,7 @@ import Header from './Components/Header'
 import MainSection from './Components/MainSection'
 import Footer from './Components/Footer'
 import Blog from './Components/Blog'
+import Portfolio from './Components/Portfolio'
 
 function App() {
   const [offsetY, setOffsetY] = useState(0)
@@ -24,6 +25,7 @@ function App() {
       </div>
       <MainSection offsetY={offsetY} />
       <Blog offsetY={offsetY} />
+      <Portfolio offsetY={offsetY} />
       <div className="parent">
         <Footer />
       </div>
