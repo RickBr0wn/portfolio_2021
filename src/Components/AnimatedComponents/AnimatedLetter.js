@@ -1,16 +1,16 @@
-import React from 'react'
+import React, { useCallback, useEffect, useState } from 'react'
 
 const AnimatedLetter = ({ children, index }) => {
-  const [hovered, setHovered] = React.useState(false)
+  const [hovered, setHovered] = useState(false)
 
-  const animationTiming = React.useCallback(() => {
+  const animationTiming = useCallback(() => {
     setHovered(true)
     setTimeout(() => {
       setHovered(false)
     }, 1000 + index * 100)
   }, [index])
 
-  React.useEffect(() => {
+  useEffect(() => {
     setTimeout(() => {
       animationTiming()
     }, 1000 + index * 100)
