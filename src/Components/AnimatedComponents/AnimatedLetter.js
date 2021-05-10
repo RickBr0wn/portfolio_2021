@@ -3,28 +3,29 @@ import React from 'react'
 const AnimatedLetter = ({ children, index }) => {
   const [hovered, setHovered] = React.useState(false)
 
-  React.useEffect(() => {
-    setTimeout(() => {
-      animationTiming()
-    }, 500 + (index * 100))
-  }, [])
-
-  const animationTiming = () => {
+  const animationTiming = React.useCallback(() => {
     setHovered(true)
     setTimeout(() => {
       setHovered(false)
-    }, 1000 + (index * 100))
-  }
+    }, 1000 + index * 100)
+  }, [index])
+
+  React.useEffect(() => {
+    setTimeout(() => {
+      animationTiming()
+    }, 1000 + index * 100)
+
+    return () => setHovered(false)
+  }, [animationTiming, index])
 
   setInterval(() => {
     animationTiming()
-  }, 30000 + (index * 100))
+  }, 10000 + index * 100)
 
   return (
     <span
-      className={hovered ? "rubberBand animated" : "rubberBand"}
-      onMouseOver={animationTiming}
-    >
+      className={hovered ? 'rubberBand animated' : 'rubberBand'}
+      onMouseOver={animationTiming}>
       {children}
     </span>
   )
