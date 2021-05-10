@@ -37,6 +37,7 @@ body {
   justify-content: space-between;
   padding: 2rem 6rem;
   height: 8.2rem;
+  width: 100vw;
   /* border: 1px solid red; */
 }
 
@@ -48,8 +49,14 @@ body {
   /* border: 1px solid red; */
 }
 
+.parent {
+  position: fixed;
+  /* border: 1px solid red; */
+}
+
 .header-navigation-container {
   display: flex;
+  /* border: 1px solid red; */
 }
 
 .header-navigation-item {
@@ -89,6 +96,21 @@ body {
   font-size: 6rem;
 }
 
+/* BLOG */
+.blog-background-image {
+  /* background-color: blueviolet; */
+  height: 100rem;
+  width: 100vw;
+}
+
+.blog-moving-part {
+  background-color: crimson;
+  height: 20rem;
+  width: 20rem;
+  position: absolute;
+  top: -20rem;
+}
+
 /* FOOTER */
 .footer {
   height: 5rem;
@@ -97,6 +119,7 @@ body {
   padding-right: 6rem;
   display: flex;
   justify-content: center;
+  width: 100vw;
 }
 
 a {
